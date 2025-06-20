@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Estatura Infantil</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f3f9ff; color: #2c3e50; }
+    h1 { color: #2874A6; text-align: center; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select { width: 100%; padding: 8px; margin-top: 5px; }
+    button { margin-top: 20px; padding: 10px; background-color: #2874A6; color: white; border: none; cursor: pointer; width: 100%; }
+    .output { margin-top: 20px; padding: 15px; background-color: #eaf2f8; border-radius: 5px; }
+    footer { text-align: center; margin-top: 40px; font-size: 14px; color: #666; border-top: 1px solid #ccc; padding-top: 10px; }
+    footer img { max-height: 40px; display: block; margin: 10px auto 5px; }
+  </style>
+</head>
+<body>
+  <h1>Avaliação de Estatura Infantil</h1>
+
+  <label>Sexo:</label>
+  <select id="sexo">
+    <option value="M">Masculino</option>
+    <option value="F">Feminino</option>
+  </select>
+
+  <label>Idade atual:</label>
+  <input type="number" id="idadeAnos" placeholder="Anos">
+  <input type="number" id="idadeMeses" placeholder="Meses">
+
+  <label>Altura atual (cm):</label>
+  <input type="number" id="altura">
+
+  <label>Altura anterior (cm):</label>
+  <input type="number" id="alturaAnt">
+
+  <label>Intervalo entre medidas (meses):</label>
+  <input type="number" id="intervaloMeses">
+
+  <label>Estatura do pai (cm):</label>
+  <input type="number" id="pai">
+
+  <label>Estatura da mãe (cm):</label>
+  <input type="number" id="mae">
+
+  <label>Idade óssea:</label>
+  <input type="number" id="idadeOsseaAnos" placeholder="Anos">
+  <input type="number" id="idadeOsseaMeses" placeholder="Meses">
+
+  <button onclick="avaliar()">Avaliar</button>
+
+  <div class="output" id="resultado"></div>
+
+  <footer>
+    <img src="logo_wevelin.png" alt="Logomarca Dr. Wevelin Matos">
+    <strong>Dr. Wevelin Matos</strong><br>
+    Pediatria e Cardiologia Pediátrica
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
